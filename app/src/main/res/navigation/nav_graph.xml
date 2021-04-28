@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
 
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.gokul.mynews.ui.splash.Splash"
+        android:label="Splash" >
+        <action
+            android:id="@+id/action_splash_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.gokul.mynews.ui.home.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_newsDetails"
+            app:destination="@id/newsDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetails"
+        android:name="com.gokul.mynews.ui.news_details.NewsDetails"
+        android:label="NewsDetails" />
 </navigation>

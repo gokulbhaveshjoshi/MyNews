@@ -22,7 +22,7 @@ class Splash: Fragment(R.layout.splash) {
     private fun splashHandler() {
         try{
             Handler(Looper.getMainLooper()).postDelayed({
-//                splashBinding.root.navigateWithId()
+                splashBinding.root.navigateWithId(R.id.action_splash_to_home2)
             },2000)
         }
         catch(e: Exception){
